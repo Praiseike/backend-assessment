@@ -161,8 +161,8 @@ npm test
 ```
 
 ## Security Enhancements
-✅ **JWT Authentication** for user authentication.
-✅ **Rate Limiting** to prevent abuse.
-✅ **Input Validation** using Express Validator.
-✅ **Error Handling** for robust API responses.
+- ✅ **JWT Authentication** for user authentication.
+- ✅ **Rate Limiting** to prevent abuse.
+- ✅ **Input Validation** using Express Validator.
+- ✅ **Error Handling** for robust API responses.
 
