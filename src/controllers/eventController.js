@@ -48,7 +48,8 @@ class EventController {
 
       // prepare the response 
       const response = {
-        ...eventRecord.dataValues,
+        name: eventRecord.name,
+        available_tickets: eventRecord.available_tickets,
         waiting_list_count: eventRecord.waiting_list.length,
         bookings_count: eventRecord.bookings.length
       }

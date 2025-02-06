@@ -31,7 +31,7 @@ Ensure you have **Node.js (>=16)** installed.
 ### Clone the Repository
 ```sh
 git clone https://github.com/Praiseike/backend-assessment.git
-cd event-ticket-booking
+cd backend-assessment
 ```
 
 ### Install Dependencies
@@ -43,17 +43,16 @@ npm install
 Create a `.env` file with the following:
 ```env
 JWT_SECRET=aweirdrandomstring
-
 ```
 
 ### Run Database Migrations
 ```sh
-npx prisma migrate dev
+npx test -- --coverage
 ```
 
 ### Start the Server
 ```sh
-npm run dev
+node index.js
 ```
 
 ## API Endpoints
@@ -105,7 +104,8 @@ POST /cancel
 **Response:**
 ```json
 {
-  "message": "Booking cancelled. Ticket reassigned."
+    "error": false,
+    "message": "Booking canceled successfully."
 }
 ```
 
@@ -116,8 +116,14 @@ GET /status/:eventId
 **Response:**
 ```json
 {
-  "available_tickets": 10,
-  "waiting_list_count": 5
+    "error": false,
+    "message": "Fetched event",
+    "data": {
+        "name": "Text event",
+        "available_tickets": 0,
+        "waiting_list_count": 1,
+        "bookings_count": 1
+    }
 }
 ```
 
