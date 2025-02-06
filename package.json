@@ -1,0 +1,40 @@
+{
+  "name": "event-booking-system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "nodemon src/app",
+    "migrate": "npx sequelize-cli db:migrate",
+    "seed": "npx sequelize-cli db:seed:all",
+    "migrate:reset": "npx sequelize-cli db:migrate:undo:all && npm run migrate && npm run seed",
+    "test": "jest --runInBand",
+    "pretest": "npm run migrate:reset"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@sequelize/sqlite3": "^7.0.0-alpha.44",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.12.0",
+    "sequelize": "^6.37.5",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "sequelize-cli": "^6.6.2",
+    "supertest": "^7.0.0"
+  }
+}
