@@ -52,7 +52,7 @@ npx test -- --coverage
 
 ### Start the Server
 ```sh
-node index.js
+npm start
 ```
 
 ## API Endpoints
@@ -165,4 +165,3 @@ npm test
 - ✅ **Rate Limiting** to prevent abuse.
 - ✅ **Input Validation** using Express Validator.
 - ✅ **Error Handling** for robust API responses.
-
