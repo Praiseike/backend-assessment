@@ -1,17 +1,18 @@
 
 const { Sequelize, Transaction } = require('sequelize');
 const { Event, Booking, WaitingList, sequelize } = require('../../models');
+const logger = require('../utils/logger');
 
 class EventController {
   static async initializeEvent(req, res) {
 
     try {
-
       const { name, available_tickets } = req.body;
       const event = await Event.create({
         name, available_tickets
       })
 
+      logger.info(`initialized event with id ${event.id}`)
 
       return res.status(201).send({
         error: false,
@@ -20,6 +21,7 @@ class EventController {
       });
 
     } catch (error) {
+      logger.error(error.message);
       return res.status(500).send({
         message: "Internal Server Error"
       })
@@ -53,12 +55,14 @@ class EventController {
         waiting_list_count: eventRecord.waiting_list.length,
         bookings_count: eventRecord.bookings.length
       }
+      logger.info("Fetched event status");
       return res.status(200).json({
         error: false,
         message: "Fetched event",
         data: response
       });
     } catch (error) {
+      logger.error(error.message);
       return res.status(500).json({
         error: true,
         message: "Internal server error",

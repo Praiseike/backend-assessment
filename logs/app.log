@@ -1,0 +1,17 @@
+[2025-02-07T18:58:56.005Z] INFO: something
+[2025-02-07T19:00:16.648Z] INFO: POST /initialize
+[2025-02-07T19:00:16.756Z] INFO: POST /initialize - Status: 500 - Duration: 109ms
+[2025-02-07T23:49:20.843Z] INFO: POST /initialize - Status: 201 - Duration: 2630ms
+[2025-02-08T00:01:06.588Z] INFO: initialized event with id 
+[2025-02-08T00:01:06.725Z] INFO: POST /initialize - Status: 201 - Duration: 699ms
+[2025-02-08T01:06:16.859Z] INFO: initialized event with id 3
+[2025-02-08T01:06:17.146Z] INFO: POST /initialize - Status: 201 - Duration: 2793ms
+[2025-02-08T01:12:44.099Z] INFO: initialized event with id 4
+[2025-02-08T01:12:44.145Z] INFO: POST /initialize - Status: 201 - Duration: 291ms
+[2025-02-08T01:12:58.379Z] INFO: initialized event with id 5
+[2025-02-08T01:12:58.406Z] INFO: POST /initialize - Status: 201 - Duration: 223ms
+[2025-02-08T01:13:00.858Z] INFO: initialized event with id 6
+[2025-02-08T01:13:00.872Z] INFO: POST /initialize - Status: 201 - Duration: 205ms
+[2025-02-08T01:13:03.706Z] INFO: initialized event with id 7
+[2025-02-08T01:13:03.722Z] INFO: POST /initialize - Status: 201 - Duration: 344ms
+[2025-02-08T01:13:05.646Z] INFO: POST /initialize - Status: 429 - Duration: 2ms

@@ -1,21 +1,20 @@
-
+const logger = require("../utils/logger");
 class Logger {
 
-        static monitor(req, res, next) {
+    static async monitor(req, res, next) {
 
         const start = Date.now();
 
-        console.log(`ON REQUEST [${new Date().toISOString()}] ${req.method} ${req.url}`);
+        // logger.info(`${req.method} ${req.url}`);
 
-        res.on('finish', async () => {
+        res.on('finish',() => {
 
-            const duration = Date.now() - start; 
-
-            console.log(`ON RESPONSE [${new Date().toISOString()}] ${req.method} ${req.url} - Status: ${res.statusCode} - Duration: ${duration}ms`);
+            const duration = Date.now() - start;
+            logger.info(`${req.method} ${req.url} - Status: ${res.statusCode} - Duration: ${duration}ms`);
         });
 
         res.on('error', (err) => {
-            console.error(`ON ERROR [${new Date().toISOString()}] ${req.method} ${req.url} - Error: ${err.message}`);
+            logger.error(`${req.method} ${req.url} - Error: ${err.message}`);
         });
 
         next();
