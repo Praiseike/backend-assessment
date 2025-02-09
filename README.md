@@ -16,7 +16,6 @@ This project is a **Node.js-based Event Ticket Booking System** that allows user
 
 ## Technologies Used
 - **Node.js & Express.js** - Server and API framework.
-- **TypeScript** - For type safety and maintainability.
 - **PostgreSQL/MySQL** - Relational database for order storage.
 - **Sequelize** - ORM for database interactions.
 - **Jest & Supertest** - For testing API endpoints.
