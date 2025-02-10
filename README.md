@@ -44,7 +44,7 @@ Create a `.env` file with the following:
 JWT_SECRET=aweirdrandomstring
 ```
 
-### Run Database Migrations
+### Run Application Tests
 ```sh
 npx test -- --coverage
 ```
