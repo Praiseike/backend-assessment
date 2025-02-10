@@ -126,11 +126,6 @@ GET /status/:eventId
 }
 ```
 
-## Running Tests
-Run all tests to verify core functionalities:
-```sh
-npm test
-```
 
 ## Project Structure
 ```
